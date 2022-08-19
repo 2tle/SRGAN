@@ -1,6 +1,6 @@
 from srgan_v2 import SRGAN
 
-EPOCHS = 1000
+EPOCHS = 300
 BATCH_SIZE = 1
 INTERVAL = 50
 

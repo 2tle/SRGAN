@@ -51,6 +51,6 @@ class DataLoader():
     def imread(self, path):
         im = Image.open(path)
         #im = cv2.imread(path)
-        #im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+        im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
         return im
         # return scipy.misc.imread(path, mode='RGB').astype(np.float)
