@@ -3,6 +3,7 @@ from glob import glob
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
+from PIL import Image
 
 
 class DataLoader():
@@ -27,8 +28,12 @@ class DataLoader():
 
             # img_hr = scipy.misc.imresize(img, self.img_res)
             # img_lr = scipy.misc.imresize(img, (low_h, low_w))
-            img_hr = cv2.resize(img, self.img_res)
-            img_lr = cv2.resize(img, (low_h,low_w))
+            # img_hr = cv2.resize(img, self.img_res)
+            # img_lr = cv2.resize(img, (low_h,low_w))
+            img_hr = img.resize(self.img_res)
+            img_lr = img.resize((low_h, low_w))
+            img_hr = np.array(img_hr)
+            img_lr = np.array(img_lr)
 
             # If training => do random flip
             if not is_testing and np.random.random() < 0.5:
@@ -44,7 +49,8 @@ class DataLoader():
         return imgs_hr, imgs_lr
 
     def imread(self, path):
-        im = cv2.imread(path)
-        im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+        im = Image.open(path)
+        #im = cv2.imread(path)
+        #im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
         return im
         # return scipy.misc.imread(path, mode='RGB').astype(np.float)
