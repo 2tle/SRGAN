@@ -7,12 +7,9 @@ This project is based on [eriklindernoren/Keras-GAN](https://github.com/eriklind
 1. create directory named `datasets`
 2. create directory `YOUR_DATASETS_NAME` in `datasets` directory
 3. put your images in `YOUR_DATASETS_NAME`
-4. edit `srgan_v2.py`
+4. edit `train.py`
 ```
-class SRGAN():
-    def __init__(self):
-    ...
-    self.dataset_name = 'YOUR_DATASETS_NAME'
+DATASETS = 'YOUR_DATASETS_NAME'
 ```
 
 ## Recommend Datasets
