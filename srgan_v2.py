@@ -27,11 +27,11 @@ import keras.backend as K
 #K.clear_session()
 
 class SRGAN():
-    def __init__(self):
+    def __init__(self, datasets, low_width=100, low_height=100):
         # Input shape
         self.channels = 3
-        self.lr_height = 100               # Low resolution height
-        self.lr_width = 100               # Low resolution width
+        self.lr_height = low_height               # Low resolution height
+        self.lr_width = low_width               # Low resolution width
         self.lr_shape = (self.lr_height, self.lr_width, self.channels)
         self.hr_height = self.lr_height*4   # High resolution height
         self.hr_width = self.lr_width*4     # High resolution width
@@ -52,7 +52,7 @@ class SRGAN():
             metrics=['accuracy'])
 
         # Configure data loader
-        self.dataset_name = 'DIV2K_train_HR'
+        self.dataset_name = datasets
         self.data_loader = DataLoader(dataset_name=self.dataset_name,
                                       img_res=(self.hr_height, self.hr_width))
 
@@ -220,8 +220,7 @@ class SRGAN():
 
             elapsed_time = datetime.datetime.now() - start_time
             # Plot the progress
-            #print(g_loss, d_loss, d_loss_real)
-            #print ("Epoch: %d| GenLoss: %f | DisLoss: %f |time: %s" % (epoch,g_loss,d_loss_real, elapsed_time))
+            
             print('===============================================================')
             print("Epoch: %d | time : %s" % (epoch, elapsed_time))
             print("Generator Loss",end='')
