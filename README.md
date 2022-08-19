@@ -1,6 +1,8 @@
 # SRGAN
 Super Resoultion GAN with Keras on macos
 
+This project is based on [eriklindernoren/Keras-GAN](https://github.com/eriklindernoren/Keras-GAN)
+
 ## Datasets
 1. create directory named `datasets`
 2. create directory `YOUR_DATASETS_NAME` in `datasets` directory
