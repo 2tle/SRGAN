@@ -26,10 +26,6 @@ class DataLoader():
             h, w = self.img_res
             low_h, low_w = int(h / 4), int(w / 4)
 
-            # img_hr = scipy.misc.imresize(img, self.img_res)
-            # img_lr = scipy.misc.imresize(img, (low_h, low_w))
-            # img_hr = cv2.resize(img, self.img_res)
-            # img_lr = cv2.resize(img, (low_h,low_w))
             img_hr = img.resize(self.img_res)
             img_lr = img.resize((low_h, low_w))
             img_hr = np.array(img_hr)
@@ -49,8 +45,5 @@ class DataLoader():
         return imgs_hr, imgs_lr
 
     def imread(self, path):
-        #im = Image.open(path)
-        im = cv2.imread(path)
-        im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
+        im = Image.open(path)
         return im
-        # return scipy.misc.imread(path, mode='RGB').astype(np.float)
