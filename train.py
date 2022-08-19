@@ -9,4 +9,4 @@ LOW_HEIGHT = 100
 
 gan = SRGAN(DATASETS, low_width = LOW_WIDTH, low_height = LOW_HEIGHT)
 gan.train(epochs=EPOCHS, batch_size=BATCH_SIZE, sample_interval=INTERVAL)
-gan.generator.save('models/SRGAN_EP%s' % (str(EPOCHS)))
+gan.generator.save('models/SRGAN_EP%s.h5' % (str(EPOCHS)))
