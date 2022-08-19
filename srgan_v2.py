@@ -222,7 +222,13 @@ class SRGAN():
             # Plot the progress
             #print(g_loss, d_loss, d_loss_real)
             #print ("Epoch: %d| GenLoss: %f | DisLoss: %f |time: %s" % (epoch,g_loss,d_loss_real, elapsed_time))
+            print('===============================================================')
             print("Epoch: %d | time : %s" % (epoch, elapsed_time))
+            print("Generator Loss",end='')
+            print(g_loss)
+            print("Discriminators Loss", end='')
+            print(d_loss)
+            print('===============================================================')
             # If at save interval => save generated image samples
             if epoch % sample_interval == 0:
                 self.sample_images(epoch)
