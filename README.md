@@ -31,3 +31,8 @@ tensorflow-macos==2.9.2
 tensorflow-metal==0.5.1
 ```
 3. run!
+
+## Pre-trained Model
+Please use the Pre-Trained model only for research purposes. Thanks!
+Pre-Trained Model is in `models` directory.
+1. `SRGAN_EP100.h5` Epoch 100 Model
