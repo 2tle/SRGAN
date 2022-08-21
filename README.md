@@ -12,12 +12,6 @@ This project is based on [eriklindernoren/Keras-GAN](https://github.com/eriklind
 DATASETS = 'YOUR_DATASETS_NAME'
 ```
 
-## Recommend Datasets
-[DIV2K datasets](https://data.vision.ee.ethz.ch/cvl/DIV2K/)
-
-[DIV2K introductory dataset paper](https://people.ee.ethz.ch/~timofter/publications/Agustsson-CVPRW-2017.pdf)
-
-
 ## How to run
 1. `pip install -r requirements.txt`
 2. `python train.py`
@@ -31,8 +25,3 @@ tensorflow-macos==2.9.2
 tensorflow-metal==0.5.1
 ```
 3. run!
-
-## Pre-trained Model
-Please use the Pre-Trained model only for research purposes. Thanks!
-Pre-Trained Model is in `models` directory.
-1. `SRGAN_EP100.h5` Epoch 100 Model
