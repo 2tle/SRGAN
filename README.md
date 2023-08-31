@@ -1,5 +1,5 @@
 # SRGAN
-Super Resoultion GAN with Keras on macos
+Super Resoultion GAN with Keras
 
 This project is based on [eriklindernoren/Keras-GAN](https://github.com/eriklindernoren/Keras-GAN)
 
@@ -16,12 +16,3 @@ DATASETS = 'YOUR_DATASETS_NAME'
 1. `pip install -r requirements.txt`
 2. `python train.py`
 model will be saved in models directory
-
-## If you wanna use this model on windows..
-1. open `requirements.txt`
-2. remove 2 lines:
-```
-tensorflow-macos==2.9.2
-tensorflow-metal==0.5.1
-```
-3. run!
